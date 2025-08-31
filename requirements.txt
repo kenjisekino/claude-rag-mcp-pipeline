@@ -1,0 +1,29 @@
+# Core RAG Pipeline Dependencies
+
+# LLM APIs
+openai>=1.0.0
+anthropic>=0.21.0
+
+# Vector Database
+chromadb>=0.4.0
+
+# Document Processing
+pypdf2>=3.0.0
+python-docx>=0.8.11
+
+# Embeddings (local alternative)
+sentence-transformers>=2.2.0
+
+# Web Interface
+streamlit>=1.28.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# Additional utilities (optional but useful)
+numpy>=1.24.0
+pandas>=2.0.0
+
+# MCP functionality
+mcp>=0.1.0
+uvicorn>=0.24.0

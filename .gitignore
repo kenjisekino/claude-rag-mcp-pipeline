@@ -1,0 +1,33 @@
+# Environment variables
+.env
+
+# Virtual environment
+rag_env/
+venv/
+env/
+
+# Vector database
+chroma_db/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Documents (optional - you may want to exclude personal docs)
+documents/
+*.pdf
+*.docx
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
