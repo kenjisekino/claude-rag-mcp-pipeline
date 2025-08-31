@@ -215,9 +215,6 @@ This system demonstrates practical implementation of:
 4. Add tests for new functionality
 5. Submit a pull request
 
-## License
-
-MIT License - see LICENSE file for details.
 
 ## Acknowledgments
 
