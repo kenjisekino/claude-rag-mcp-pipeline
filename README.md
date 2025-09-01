@@ -100,7 +100,7 @@ Edit the configuration file:
 {
   "mcpServers": {
     "personal-documents": {
-      "command": "/path/to/your/rag_env/bin/python",
+      "command": "/path/to/your/project/rag_env/bin/python",
       "args": ["/path/to/your/project/mcp_server.py"],
       "env": {
         "OPENAI_API_KEY": "your_key",
