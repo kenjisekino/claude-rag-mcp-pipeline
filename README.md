@@ -1,14 +1,14 @@
 # Claude RAG Pipeline with MCP Integration
 
-A production-grade Retrieval Augmented Generation (RAG) system built with Claude, featuring conversational memory, hybrid knowledge modes, and Model Context Protocol (MCP) integration for seamless document search within Claude Desktop.
+A production-grade Retrieval Augmented Generation (RAG) system built with Claude, featuring conversational memory, hybrid knowledge modes, and Model Context Protocol (MCP) integration for document search functionality within Claude Desktop.
 
 ## Features
 
 - **Complete RAG Pipeline**: Document processing, vector embeddings, semantic search, and LLM-powered responses
 - **Conversational Memory**: Full ChatGPT-style conversations with context preservation across exchanges
-- **Hybrid Knowledge Mode**: Automatically switches between document-based responses and general knowledge
+- **Hybrid Knowledge Mode**: Ability to switch between document-based responses and general knowledge
 - **Semantic Chunking**: Intelligent document segmentation that preserves meaning and context
-- **MCP Integration**: Native Claude Desktop integration for seamless document access
+- **MCP Integration**: Native Claude Desktop integration for document access functionality
 - **Multi-format Support**: PDF, Word, Markdown, and plain text documents
 - **Vector Database**: ChromaDB for efficient semantic search
 - **Web Interface**: Streamlit app for document management and chat
@@ -116,7 +116,7 @@ Edit the configuration file:
 python mcp_server.py
 ```
 
-3. **Use Claude Desktop** - it will automatically access your documents when relevant
+3. **Use Claude Desktop** - Chats will access your documents when relevant (e.g. try prompting "Can you search my documents for details regarding ...?"). Ensure "personal-documents" is enabled under "Search and tools".
 
 ## Project Structure
 
@@ -192,7 +192,7 @@ Change the Claude model version in `src/llm_service.py`:
 model="claude-3-5-haiku-latest"     # Fast, cost-effective  
 model="claude-3-5-sonnet-latest"    # Higher quality reasoning
 model="claude-3-opus-latest"        # Most capable
-model="claude-4-sonnet-latest"      # If available in your account
+model="claude-4-sonnet-latest"      # If available
 ```
 
 ## Use Cases
