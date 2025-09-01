@@ -188,10 +188,11 @@ response = llm_service.generate_response(query, chunks, max_tokens=600)
 ### Claude Model Selection
 Change the Claude model version in `src/llm_service.py`:
 ```python
-# In LLMService class methods, update the model parameter:
-model="claude-3-5-haiku-20241022"     # Fast, cost-effective
-model="claude-3-5-sonnet-20240620"   # Higher quality reasoning
-model="claude-3-opus-20240229"       # Most capable (if available)
+ # In LLMService class methods, update the model parameter (check console.anthropic.com for currently available models):
+model="claude-3-5-haiku-latest"     # Fast, cost-effective  
+model="claude-3-5-sonnet-latest"    # Higher quality reasoning
+model="claude-3-opus-latest"        # Most capable
+model="claude-4-sonnet-latest"      # If available in your account
 ```
 
 ## Use Cases
@@ -210,7 +211,20 @@ This system demonstrates practical implementation of:
 - Multi-step reasoning through conversation context
 - Hybrid AI architectures combining retrieval and generation
 
+## API Costs
+
+**Typical monthly usage:**
+- OpenAI embeddings: $2-10
+- Claude API calls: $5-25
+- **Total: $7-35/month for moderate usage**
+
+**Cost reduction:**
+- Use local embeddings (sentence-transformers) for free embedding generation
+- Adjust response length limits
+- Optimize chunk retrieval counts
+
 ## Production Considerations
+
 ### Current Implementation Scope
 This system is designed for personal/single-user environments and demonstrates production-grade code quality and architecture patterns. The core RAG functionality, MCP integration, and conversational AI systems are enterprise-quality implementations.
 
@@ -256,18 +270,6 @@ To deploy this system in a true production enterprise environment, the following
 - Cost optimization and budget controls
 - API usage monitoring and alerts
 - Resource utilization optimization
-
-## API Costs
-
-**Typical monthly usage:**
-- OpenAI embeddings: $2-10
-- Claude API calls: $5-25
-- **Total: $7-35/month for moderate usage**
-
-**Cost reduction:**
-- Use local embeddings (sentence-transformers) for free embedding generation
-- Adjust response length limits
-- Optimize chunk retrieval counts
 
 ## Contributing
 
