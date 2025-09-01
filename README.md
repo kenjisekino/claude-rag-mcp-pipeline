@@ -67,22 +67,34 @@ cp .env.example .env
 
 ### Basic Usage
 
-1. **Add documents** to the `documents/` folder (PDF, Word, Markdown, or text files)
+1. **Create documents folder**:
+```bash
+mkdir documents
+```
 
-2. **Start the Streamlit app**:
+2. **Add documents** to the `documents/` folder (PDF, Word, Markdown, or text files)
+
+3. **Start the Streamlit app**:
 ```bash
 streamlit run app.py
 ```
 
-3. **Ingest documents** using the sidebar interface
+4. **Ingest documents** using the sidebar interface
 
-4. **Chat with your documents** using the conversational interface
+5. **Chat with your documents** using the conversational interface
 
 ### MCP Integration (Advanced)
 
 Connect your RAG system to Claude Desktop for native document access:
 
-1. **Configure Claude Desktop**:
+1. **Configure Claude Desktop** (create config file if it doesn't exist):
+```bash
+# Create the config file if it doesn't exist
+mkdir -p "~/Library/Application Support/Claude"
+touch "~/Library/Application Support/Claude/claude_desktop_config.json"
+```
+
+Edit the configuration file:
 ```json
 // ~/.../Claude/claude_desktop_config.json
 {
@@ -171,6 +183,15 @@ result = rag.query(question, n_results=5)
 
 # Claude response length
 response = llm_service.generate_response(query, chunks, max_tokens=600)
+```
+
+### Claude Model Selection
+Change the Claude model version in `src/llm_service.py`:
+```python
+# In LLMService class methods, update the model parameter:
+model="claude-3-5-haiku-20241022"     # Fast, cost-effective
+model="claude-3-5-sonnet-20240620"   # Higher quality reasoning
+model="claude-3-opus-20240229"       # Most capable (if available)
 ```
 
 ## Use Cases
