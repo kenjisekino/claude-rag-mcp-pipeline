@@ -1,6 +1,6 @@
 # Claude RAG Pipeline with MCP Integration
 
-A production-grade Retrieval Augmented Generation (RAG) system built with Claude, featuring conversational memory, hybrid knowledge modes, and Model Context Protocol (MCP) integration for document search functionality within Claude Desktop.
+Retrieval Augmented Generation (RAG) system built with Claude, featuring conversational memory, hybrid knowledge modes, and Model Context Protocol (MCP) integration for document search functionality within Claude Desktop.
 
 ## Features
 
