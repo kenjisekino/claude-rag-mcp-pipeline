@@ -288,6 +288,6 @@ MIT License - see LICENSE file for details.
 Built with:
 - [Anthropic Claude](https://anthropic.com) for LLM capabilities
 - [OpenAI](https://openai.com) for embedding models
-- [ChromaDB](https://chromadb.com) for vector storage
+- [ChromaDB](https://www.trychroma.com) for vector storage
 - [Streamlit](https://streamlit.io) for web interface
 - [Model Context Protocol](https://modelcontextprotocol.io) for Claude Desktop integration
